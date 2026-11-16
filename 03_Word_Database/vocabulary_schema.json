@@ -1,19 +1,19 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": ["approved", "needs_review", "rejected"],
   "levels": ["easy", "medium", "hard"],
+  "research_unit": {
+    "granularity": "one_persian_letter_per_run",
+    "id_pattern": "LETTER-{letter}",
+    "alef_variant_rule": "آ is researched under ا and does not get a separate run",
+    "next_letter_gate": "Complete current-letter research, validation, report, and project-owner review before starting the next letter"
+  },
   "categories": {
-    "easy": [
-      "name", "surname", "city", "country", "food", "fruit", "color", "animal"
-    ],
-    "medium_additions": [
-      "objects", "occupation", "flower_and_plant", "body_parts"
-    ],
-    "hard_additions": [
-      "car", "famous_people", "sport"
-    ],
+    "easy": ["name", "surname", "city", "country", "food", "fruit", "color", "animal"],
+    "medium_additions": ["objects", "occupation", "flower_and_plant", "body_parts"],
+    "hard_additions": ["car", "famous_people", "sport"],
     "hard_name_columns": ["girl_name", "boy_name"],
     "excluded_from_main_list": ["clothing"],
     "independent_tools_category": false
@@ -25,9 +25,30 @@
   },
   "required_fields": [
     "id", "term", "normalized_term", "initial_letter", "category_id",
-    "level", "definition", "status", "source", "review_note",
-    "research_batch_id", "reviewed_at"
+    "level", "definition", "status", "source", "alternative_spellings",
+    "review_note", "rejection_reason", "research_batch_id", "reviewed_at"
   ],
+  "field_definitions": {
+    "id": "Stable unique record identifier",
+    "term": "Canonical Persian display form",
+    "normalized_term": "Deduplication form; normalize ي to ی, ك to ک, extra spaces, and whitespace variants",
+    "initial_letter": "Persian research letter; آ is represented by ا",
+    "category_id": "One category identifier from the project taxonomy",
+    "level": "easy, medium, or hard",
+    "definition": "Short explanation sufficient to disambiguate the entry",
+    "status": "approved, needs_review, or rejected",
+    "source": {
+      "title": "Source title",
+      "publisher": "Publisher or organization",
+      "url": "Canonical source URL",
+      "accessed_at": "Access date in YYYY-MM-DD format"
+    },
+    "alternative_spellings": "Array of accepted spelling variants that are not separate records",
+    "review_note": "Adjudication notes, ambiguity, or supporting context",
+    "rejection_reason": "Required when status is rejected; otherwise null or empty",
+    "research_batch_id": "One-letter unit identifier, e.g. LETTER-ب",
+    "reviewed_at": "Review date in YYYY-MM-DD format, or null if not reviewed"
+  },
   "record_example": {
     "id": "ESF-ANIMAL-B-0001",
     "term": "ببر",
@@ -37,9 +58,16 @@
     "level": "easy",
     "definition": "پستانداری گوشت‌خوار از خانواده گربه‌سانان.",
     "status": "needs_review",
-    "source": {"title": "", "publisher": "", "url": "", "accessed_at": ""},
+    "source": {
+      "title": "",
+      "publisher": "",
+      "url": "",
+      "accessed_at": ""
+    },
+    "alternative_spellings": [],
     "review_note": "نمونه ساختاری؛ برای انتشار تأیید نشده است.",
-    "research_batch_id": "PILOT-000",
+    "rejection_reason": null,
+    "research_batch_id": "LETTER-ب",
     "reviewed_at": null
   }
 }
