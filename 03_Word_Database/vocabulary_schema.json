@@ -1,15 +1,27 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": ["approved", "needs_review", "rejected"],
   "levels": ["easy", "medium", "hard"],
+  "categories": {
+    "easy": [
+      "name", "surname", "city", "country", "food", "fruit", "color", "animal"
+    ],
+    "medium_additions": [
+      "objects", "occupation", "flower_and_plant", "body_parts"
+    ],
+    "hard_additions": [
+      "car", "famous_people", "sport"
+    ],
+    "hard_name_columns": ["girl_name", "boy_name"],
+    "excluded_from_main_list": ["clothing"],
+    "independent_tools_category": false
+  },
   "category_counts": {
     "easy_total": 8,
     "medium_total": 12,
-    "hard_columns_total": 16,
-    "hard_name_columns": ["girl_name", "boy_name"],
-    "independent_tools_category": false
+    "hard_columns_total": 16
   },
   "required_fields": [
     "id", "term", "normalized_term", "initial_letter", "category_id",
