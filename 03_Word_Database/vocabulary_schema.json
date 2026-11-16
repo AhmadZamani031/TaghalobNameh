@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.1",
+  "project": "TaghalobNameh",
+  "topic": "esm_o_famil",
+  "statuses": ["approved", "needs_review", "rejected"],
+  "levels": ["easy", "medium", "hard"],
+  "category_counts": {
+    "easy_total": 10,
+    "medium_total": 15,
+    "hard_columns_total": 21,
+    "medium_category_15": "tools",
+    "medium_category_15_status": "pending_approval"
+  },
+  "required_fields": [
+    "id", "term", "normalized_term", "initial_letter", "category_id",
+    "level", "definition", "status", "source", "review_note",
+    "research_batch_id", "reviewed_at"
+  ],
+  "record_example": {
+    "id": "ESF-ANIMAL-B-0001",
+    "term": "ببر",
+    "normalized_term": "ببر",
+    "initial_letter": "ب",
+    "category_id": "animal",
+    "level": "easy",
+    "definition": "پستانداری گوشت‌خوار از خانواده گربه‌سانان.",
+    "status": "needs_review",
+    "source": {"title": "", "publisher": "", "url": "", "accessed_at": ""},
+    "review_note": "نمونه ساختاری؛ برای انتشار تأیید نشده است.",
+    "research_batch_id": "PILOT-000",
+    "reviewed_at": null
+  }
+}
