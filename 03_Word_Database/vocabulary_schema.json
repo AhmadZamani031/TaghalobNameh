@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": ["approved", "needs_review", "rejected"],
@@ -23,10 +23,16 @@
     "medium_total": 12,
     "hard_columns_total": 16
   },
+  "csv_columns": [
+    "id", "term", "normalized_term", "initial_letter", "category_id",
+    "level", "definition", "status", "source_title", "source_publisher",
+    "source_url", "source_accessed_at", "alternative_spellings",
+    "review_note", "rejection_reason", "research_batch_id", "reviewed_at"
+  ],
   "required_fields": [
     "id", "term", "normalized_term", "initial_letter", "category_id",
-    "level", "definition", "status", "source", "alternative_spellings",
-    "review_note", "rejection_reason", "research_batch_id", "reviewed_at"
+    "level", "status", "source_title", "source_publisher", "source_url",
+    "source_accessed_at", "research_batch_id"
   ],
   "field_definitions": {
     "id": "Stable unique record identifier",
@@ -37,13 +43,11 @@
     "level": "easy, medium, or hard",
     "definition": "Short explanation sufficient to disambiguate the entry",
     "status": "approved, needs_review, or rejected",
-    "source": {
-      "title": "Source title",
-      "publisher": "Publisher or organization",
-      "url": "Canonical source URL",
-      "accessed_at": "Access date in YYYY-MM-DD format"
-    },
-    "alternative_spellings": "Array of accepted spelling variants that are not separate records",
+    "source_title": "Source title",
+    "source_publisher": "Publisher or organization",
+    "source_url": "Canonical source URL",
+    "source_accessed_at": "Access date in YYYY-MM-DD format",
+    "alternative_spellings": "Accepted spelling variants that are not separate records",
     "review_note": "Adjudication notes, ambiguity, or supporting context",
     "rejection_reason": "Required when status is rejected; otherwise null or empty",
     "research_batch_id": "One-letter unit identifier, e.g. LETTER-ب",
@@ -58,16 +62,14 @@
     "level": "easy",
     "definition": "پستانداری گوشت‌خوار از خانواده گربه‌سانان.",
     "status": "needs_review",
-    "source": {
-      "title": "",
-      "publisher": "",
-      "url": "",
-      "accessed_at": ""
-    },
-    "alternative_spellings": [],
+    "source_title": "",
+    "source_publisher": "",
+    "source_url": "",
+    "source_accessed_at": "",
+    "alternative_spellings": "",
     "review_note": "نمونه ساختاری؛ برای انتشار تأیید نشده است.",
-    "rejection_reason": null,
+    "rejection_reason": "",
     "research_batch_id": "LETTER-ب",
-    "reviewed_at": null
+    "reviewed_at": ""
   }
 }
