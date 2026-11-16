@@ -1,15 +1,15 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": ["approved", "needs_review", "rejected"],
   "levels": ["easy", "medium", "hard"],
   "category_counts": {
-    "easy_total": 10,
-    "medium_total": 15,
-    "hard_columns_total": 21,
-    "medium_category_15": "tools",
-    "medium_category_15_status": "pending_approval"
+    "easy_total": 8,
+    "medium_total": 12,
+    "hard_columns_total": 16,
+    "hard_name_columns": ["girl_name", "boy_name"],
+    "independent_tools_category": false
   },
   "required_fields": [
     "id", "term", "normalized_term", "initial_letter", "category_id",
