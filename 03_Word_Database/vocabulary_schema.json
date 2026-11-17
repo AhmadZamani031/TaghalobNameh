@@ -1,9 +1,10 @@
 {
-  "schema_version": "1.8",
+  "schema_version": "1.9",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": [
     "approved",
+    "provisionally_accepted",
     "needs_review",
     "rejected"
   ],
@@ -101,7 +102,7 @@
     "category_id": "One category identifier from the project taxonomy",
     "level": "Primary selected level for compatibility; use assigned_levels as the authoritative list when a word is shared across levels",
     "definition": "Short explanation sufficient to disambiguate the entry",
-    "status": "approved, needs_review, or rejected",
+    "status": "approved (fully source-verified and publishable), provisionally_accepted (passed lightweight structural/orthographic checks based on prior research; not publishable until full source adjudication), needs_review, or rejected",
     "source_title": "Source title",
     "source_publisher": "Publisher or organization",
     "source_url": "Canonical source URL",
