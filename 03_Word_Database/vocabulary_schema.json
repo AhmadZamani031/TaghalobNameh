@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.7",
+  "schema_version": "1.8",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": [
@@ -75,7 +75,8 @@
     "research_batch_id",
     "reviewed_at",
     "selection_status",
-    "selection_note"
+    "selection_note",
+    "assigned_levels"
   ],
   "required_fields": [
     "id",
@@ -89,7 +90,8 @@
     "source_url",
     "source_accessed_at",
     "research_batch_id",
-    "selection_status"
+    "selection_status",
+    "assigned_levels"
   ],
   "field_definitions": {
     "id": "Stable unique record identifier",
@@ -97,7 +99,7 @@
     "normalized_term": "Deduplication form; normalize ي to ی, ك to ک, extra spaces, and whitespace variants",
     "initial_letter": "Persian research letter; آ is represented by ا",
     "category_id": "One category identifier from the project taxonomy",
-    "level": "Selected difficulty level; blank for reserve candidates",
+    "level": "Primary selected level for compatibility; use assigned_levels as the authoritative list when a word is shared across levels",
     "definition": "Short explanation sufficient to disambiguate the entry",
     "status": "approved, needs_review, or rejected",
     "source_title": "Source title",
@@ -110,7 +112,8 @@
     "research_batch_id": "One-letter unit identifier, e.g. LETTER-ب",
     "reviewed_at": "Review date in YYYY-MM-DD format, or null if not reviewed",
     "selection_status": "selected or reserve; separate from lexical validation",
-    "selection_note": "Selection rationale or reserve note"
+    "selection_note": "Selection rationale or reserve note",
+    "assigned_levels": "Semicolon-separated difficulty levels; authoritative for multi-level assignments"
   },
   "record_example": {
     "id": "ESF-ANIMAL-B-0001",
@@ -135,9 +138,10 @@
     "easy_max_per_category": 3,
     "medium_max_per_category": 5,
     "hard_max_per_category": 10,
-    "hard_name_columns": "girl_name and boy_name separately capped at 10",
-    "duplicates": "Avoid repeats between levels within a category when enough valid candidates exist",
-    "underfilled": "Maximums, not quotas; empty slots are acceptable",
-    "approval": "Selection is not approval; selected records remain needs_review pending source validation"
+    "distinct_word_count": "Deduplicate semantic answer families; varieties of ash count as one",
+    "allocation": "Up to 3 easiest distinct terms for easy; up to 5 different medium; up to 10 remaining distinct hard",
+    "hard_reuse": "When fewer than 10 distinct candidates remain, reuse hardest medium then easy entries in hard; if fewer than 10 total, include all in hard",
+    "approval": "Selection is separate from lexical approval; source validation remains required",
+    "multi_level_storage": "assigned_levels authoritative; level stores easiest assigned level"
   }
 }
