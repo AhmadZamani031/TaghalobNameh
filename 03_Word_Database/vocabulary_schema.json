@@ -16,7 +16,7 @@
     "granularity": "one_persian_letter_per_run",
     "id_pattern": "LETTER-{letter}",
     "alef_variant_rule": "آ is researched under ا and does not get a separate run",
-    "next_letter_gate": "Complete current-letter research, validation, report, and project-owner review before starting the next letter",
+    "next_letter_gate": "Complete current-letter research, internal source/orthography checks, level allocation, report, and task-status update before proceeding; project-owner review is not required unless explicitly requested.",
     "quota_policy": "No mandatory minimum or quota; no numeric ceiling unless set by the project owner before the run",
     "default_stop_rule": "Stop after relevant source searches and independent query variants yield no new distinct, defensible candidates"
   },
