@@ -1,21 +1,54 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
-  "statuses": ["approved", "needs_review", "rejected"],
-  "levels": ["easy", "medium", "hard"],
+  "statuses": [
+    "approved",
+    "needs_review",
+    "rejected"
+  ],
+  "levels": [
+    "easy",
+    "medium",
+    "hard"
+  ],
   "research_unit": {
     "granularity": "one_persian_letter_per_run",
     "id_pattern": "LETTER-{letter}",
     "alef_variant_rule": "آ is researched under ا and does not get a separate run",
-    "next_letter_gate": "Complete current-letter research, validation, report, and project-owner review before starting the next letter"
+    "next_letter_gate": "Complete current-letter research, validation, report, and project-owner review before starting the next letter",
+    "quota_policy": "No mandatory minimum or quota; no numeric ceiling unless set by the project owner before the run",
+    "default_stop_rule": "Stop after relevant source searches and independent query variants yield no new distinct, defensible candidates"
   },
   "categories": {
-    "easy": ["name", "surname", "city", "country", "food", "fruit", "color", "animal"],
-    "medium_additions": ["objects", "occupation", "flower_and_plant", "body_parts"],
-    "hard_additions": ["car", "famous_people", "sport"],
-    "hard_name_columns": ["girl_name", "boy_name"],
-    "excluded_from_main_list": ["clothing"],
+    "easy": [
+      "name",
+      "surname",
+      "city",
+      "country",
+      "food",
+      "fruit",
+      "color",
+      "animal"
+    ],
+    "medium_additions": [
+      "objects",
+      "occupation",
+      "flower_and_plant",
+      "body_parts"
+    ],
+    "hard_additions": [
+      "car",
+      "famous_people",
+      "sport"
+    ],
+    "hard_name_columns": [
+      "girl_name",
+      "boy_name"
+    ],
+    "excluded_from_main_list": [
+      "clothing"
+    ],
     "independent_tools_category": false
   },
   "category_counts": {
@@ -24,15 +57,37 @@
     "hard_columns_total": 16
   },
   "csv_columns": [
-    "id", "term", "normalized_term", "initial_letter", "category_id",
-    "level", "definition", "status", "source_title", "source_publisher",
-    "source_url", "source_accessed_at", "alternative_spellings",
-    "review_note", "rejection_reason", "research_batch_id", "reviewed_at"
+    "id",
+    "term",
+    "normalized_term",
+    "initial_letter",
+    "category_id",
+    "level",
+    "definition",
+    "status",
+    "source_title",
+    "source_publisher",
+    "source_url",
+    "source_accessed_at",
+    "alternative_spellings",
+    "review_note",
+    "rejection_reason",
+    "research_batch_id",
+    "reviewed_at"
   ],
   "required_fields": [
-    "id", "term", "normalized_term", "initial_letter", "category_id",
-    "level", "status", "source_title", "source_publisher", "source_url",
-    "source_accessed_at", "research_batch_id"
+    "id",
+    "term",
+    "normalized_term",
+    "initial_letter",
+    "category_id",
+    "level",
+    "status",
+    "source_title",
+    "source_publisher",
+    "source_url",
+    "source_accessed_at",
+    "research_batch_id"
   ],
   "field_definitions": {
     "id": "Stable unique record identifier",
