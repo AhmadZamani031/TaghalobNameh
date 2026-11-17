@@ -93,10 +93,10 @@
 - شناسه پژوهش باید حرف را مشخص کند؛ الگوی پیشنهادی LETTER-[حرف] است.
 - «آ» زیرمجموعه «ا» است و در همان نوبت حرف «ا» بررسی می‌شود؛ برای آن نوبت جداگانه ساخته نمی‌شود.
 - در هر نوبت، تمام دسته‌ها و سطوحی که آن حرف در آن‌ها کاربرد دارد بررسی می‌شوند؛ دامنه دسته‌ها باید در brief همان وظیفه روشن باشد.
-- سقف تعداد مدخل برای هر خانه باید پیش از شروع همان حرف تعیین شود. سقف، هدف اجباری نیست؛ کیفیت بر تعداد مقدم است.
+- سقف انتخاب برای هر دسته مطابق بند ۹.۱ و ۹.۲ است؛ این سقف‌ها حداکثرند، نه سهمیه اجباری. کیفیت بر تعداد مقدم است.
 - پس از پایان منابع معقول یا رسیدن به سقف مصوب، پژوهش همان حرف متوقف و کمبودها گزارش می‌شود.
 - حرف بعدی تا تحویل گزارش حرف جاری و فراهم‌شدن فرصت کنترل مدیر پروژه آغاز نمی‌شود.
 
 ## ۱۱. فیلدهای داده
-فیلدهای اصلی: id، term، normalized_term، initial_letter، category_id، level، definition، status، source، alternative_spellings، review_note، rejection_reason، research_batch_id، reviewed_at.
+فیلدهای اصلی: id، term، normalized_term، initial_letter، category_id، level، definition، status، source، alternative_spellings، review_note، rejection_reason، research_batch_id، reviewed_at، selection_status، selection_note، assigned_levels.
 ساختار دقیق و نوع داده در vocabulary_schema.json تعریف شده و CSV مرکزی باید با آن هم‌خوان باشد.
