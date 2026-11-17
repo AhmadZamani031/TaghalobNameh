@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.6",
+  "schema_version": "1.7",
   "project": "TaghalobNameh",
   "topic": "esm_o_famil",
   "statuses": [
@@ -73,7 +73,9 @@
     "review_note",
     "rejection_reason",
     "research_batch_id",
-    "reviewed_at"
+    "reviewed_at",
+    "selection_status",
+    "selection_note"
   ],
   "required_fields": [
     "id",
@@ -81,13 +83,13 @@
     "normalized_term",
     "initial_letter",
     "category_id",
-    "level",
     "status",
     "source_title",
     "source_publisher",
     "source_url",
     "source_accessed_at",
-    "research_batch_id"
+    "research_batch_id",
+    "selection_status"
   ],
   "field_definitions": {
     "id": "Stable unique record identifier",
@@ -95,7 +97,7 @@
     "normalized_term": "Deduplication form; normalize ي to ی, ك to ک, extra spaces, and whitespace variants",
     "initial_letter": "Persian research letter; آ is represented by ا",
     "category_id": "One category identifier from the project taxonomy",
-    "level": "easy, medium, or hard",
+    "level": "Selected difficulty level; blank for reserve candidates",
     "definition": "Short explanation sufficient to disambiguate the entry",
     "status": "approved, needs_review, or rejected",
     "source_title": "Source title",
@@ -106,7 +108,9 @@
     "review_note": "Adjudication notes, ambiguity, or supporting context",
     "rejection_reason": "Required when status is rejected; otherwise null or empty",
     "research_batch_id": "One-letter unit identifier, e.g. LETTER-ب",
-    "reviewed_at": "Review date in YYYY-MM-DD format, or null if not reviewed"
+    "reviewed_at": "Review date in YYYY-MM-DD format, or null if not reviewed",
+    "selection_status": "selected or reserve; separate from lexical validation",
+    "selection_note": "Selection rationale or reserve note"
   },
   "record_example": {
     "id": "ESF-ANIMAL-B-0001",
@@ -126,5 +130,14 @@
     "rejection_reason": "",
     "research_batch_id": "LETTER-ب",
     "reviewed_at": ""
+  },
+  "selection_rules": {
+    "easy_max_per_category": 3,
+    "medium_max_per_category": 5,
+    "hard_max_per_category": 10,
+    "hard_name_columns": "girl_name and boy_name separately capped at 10",
+    "duplicates": "Avoid repeats between levels within a category when enough valid candidates exist",
+    "underfilled": "Maximums, not quotas; empty slots are acceptable",
+    "approval": "Selection is not approval; selected records remain needs_review pending source validation"
   }
 }
